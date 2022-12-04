@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20221204 16:28:05.975" rpa="false" schemaversion="3">
+<suite id="s1" name="Test" source="C:\Users\Admin\PycharmProjects\Wazoku\Automation\tests\test.robot">
+<test id="s1-t1" name="This is a test case that logs in a valid user to Wazoku Home Page" line="13">
+<kw name="Start Browser with Wazoku URL" library="GlobalLibrary" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${home_page_url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221204 16:28:07.254" level="INFO">Opening browser 'chrome' to base url 'https://automationtest.wazoku.com/ccc/customer-community'.</msg>
+<status status="PASS" starttime="20221204 16:28:07.254" endtime="20221204 16:28:13.952"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221204 16:28:13.952" endtime="20221204 16:28:14.099"/>
+</kw>
+<status status="PASS" starttime="20221204 16:28:07.254" endtime="20221204 16:28:14.100"/>
+</kw>
+<kw name="Login to Wazoku">
+<arg>${username}</arg>
+<arg>${valid_password}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${login}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221204 16:28:14.102" endtime="20221204 16:28:14.443"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221204 16:28:14.443" level="INFO">Clicking element '//span[contains(text(),'Login or Register')]'.</msg>
+<status status="PASS" starttime="20221204 16:28:14.443" endtime="20221204 16:28:14.804"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${email_loc}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221204 16:28:14.806" level="INFO">Typing text 'automation@email.com' into text field 'id=emailField'.</msg>
+<status status="PASS" starttime="20221204 16:28:14.804" endtime="20221204 16:28:15.063"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${password_loc}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221204 16:28:15.078" level="INFO">Typing password into text field 'id=passwordField'.</msg>
+<msg timestamp="20221204 16:28:15.167" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221204 16:28:15.340" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221204 16:28:15.063" endtime="20221204 16:28:15.340"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${submit_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221204 16:28:15.340" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20221204 16:28:15.340" endtime="20221204 16:28:15.447"/>
+</kw>
+<status status="PASS" starttime="20221204 16:28:14.101" endtime="20221204 16:28:15.447"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221204 16:28:17.447" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221204 16:28:15.447" endtime="20221204 16:28:17.447"/>
+</kw>
+<kw name="Go to Discover">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${discover_loc}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221204 16:28:17.448" endtime="20221204 16:28:17.596"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${discover_loc}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221204 16:28:17.597" level="INFO">Clicking element '//a[text()='Discover']'.</msg>
+<status status="PASS" starttime="20221204 16:28:17.596" endtime="20221204 16:28:17.792"/>
+</kw>
+<status status="PASS" starttime="20221204 16:28:17.447" endtime="20221204 16:28:17.792"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221204 16:28:19.793" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221204 16:28:17.793" endtime="20221204 16:28:19.794"/>
+</kw>
+<kw name="Unselect Challenges">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${challenges_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221204 16:28:19.794" endtime="20221204 16:28:19.844"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${challenges_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221204 16:28:19.844" level="INFO">Clicking element '//button[contains(text(),'Challenges')]'.</msg>
+<status status="PASS" starttime="20221204 16:28:19.844" endtime="20221204 16:28:19.909"/>
+</kw>
+<status status="PASS" starttime="20221204 16:28:19.794" endtime="20221204 16:28:19.909"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221204 16:28:21.910" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221204 16:28:19.910" endtime="20221204 16:28:21.910"/>
+</kw>
+<kw name="Unselect Conversations">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${conversation_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221204 16:28:21.910" endtime="20221204 16:28:21.957"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${conversation_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221204 16:28:21.957" level="INFO">Clicking element '//button[contains(text(),'Conversations')]'.</msg>
+<status status="PASS" starttime="20221204 16:28:21.957" endtime="20221204 16:28:22.069"/>
+</kw>
+<status status="PASS" starttime="20221204 16:28:21.910" endtime="20221204 16:28:22.069"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221204 16:28:24.070" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221204 16:28:22.070" endtime="20221204 16:28:24.070"/>
+</kw>
+<kw name="Verify Idea Results Generated">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${result}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20221204 16:28:24.078" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20221204 16:28:24.070" endtime="20221204 16:28:24.078"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${count}&gt;0</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20221204 16:28:24.078" endtime="20221204 16:28:24.078"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${count} idea(s) found</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221204 16:28:24.078" level="INFO">1 idea(s) found</msg>
+<status status="PASS" starttime="20221204 16:28:24.078" endtime="20221204 16:28:24.078"/>
+</kw>
+<status status="PASS" starttime="20221204 16:28:24.070" endtime="20221204 16:28:24.078"/>
+</kw>
+<kw name="Select First Idea">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${idea}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221204 16:28:24.086" endtime="20221204 16:28:24.107"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${idea}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221204 16:28:24.109" level="INFO">Clicking element '//div[@class='wk-card-header__header']'.</msg>
+<status status="PASS" starttime="20221204 16:28:24.107" endtime="20221204 16:28:24.162"/>
+</kw>
+<status status="PASS" starttime="20221204 16:28:24.086" endtime="20221204 16:28:24.162"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221204 16:28:26.163" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221204 16:28:24.163" endtime="20221204 16:28:26.163"/>
+</kw>
+<kw name="Verify Idea Window loads correctly">
+<kw name="Verify Maximize Idea Page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${view_full}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221204 16:28:26.163" level="INFO">Clicking element '//span[contains(text(),'View')]'.</msg>
+<status status="PASS" starttime="20221204 16:28:26.163" endtime="20221204 16:28:26.289"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221204 16:28:28.646" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-68.png"&gt;&lt;img src="selenium-screenshot-68.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221204 16:28:26.289" endtime="20221204 16:28:28.646"/>
+</kw>
+<status status="PASS" starttime="20221204 16:28:26.163" endtime="20221204 16:28:28.647"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221204 16:28:33.647" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20221204 16:28:28.647" endtime="20221204 16:28:33.647"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>ID</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221204 16:28:33.691" level="INFO">Current page contains text 'ID'.</msg>
+<status status="PASS" starttime="20221204 16:28:33.647" endtime="20221204 16:28:33.692"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${identify}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221204 16:28:33.703" level="INFO">Current page contains element '//span[contains(text(),'Identify')]'.</msg>
+<status status="PASS" starttime="20221204 16:28:33.692" endtime="20221204 16:28:33.703"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${evaluate}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221204 16:28:33.715" level="INFO">Current page contains element '//span[contains(text(),'Evaluate')]'.</msg>
+<status status="PASS" starttime="20221204 16:28:33.703" endtime="20221204 16:28:33.715"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${develop}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221204 16:28:33.725" level="INFO">Current page contains element '//span[contains(text(),'Develop')]'.</msg>
+<status status="PASS" starttime="20221204 16:28:33.715" endtime="20221204 16:28:33.725"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221204 16:28:34.237" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-69.png"&gt;&lt;img src="selenium-screenshot-69.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221204 16:28:33.725" endtime="20221204 16:28:34.237"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${complete}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221204 16:28:34.304" level="INFO">Current page contains element '//span[contains(text(),'Completed')]'.</msg>
+<status status="PASS" starttime="20221204 16:28:34.237" endtime="20221204 16:28:34.304"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${show_details}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221204 16:28:34.335" level="INFO">Current page contains element '//button[contains(text(),'Show Details')]'.</msg>
+<status status="PASS" starttime="20221204 16:28:34.304" endtime="20221204 16:28:34.335"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${creator_image}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221204 16:28:34.353" level="INFO">Current page contains element 'css:.img-fluid'.</msg>
+<status status="PASS" starttime="20221204 16:28:34.335" endtime="20221204 16:28:34.353"/>
+</kw>
+<kw name="Verify Element Text" library="GlobalLibrary">
+<arg>${idea_title}</arg>
+<arg>Collaboration space with key accounts</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20221204 16:28:34.354" level="INFO">Verifying element 'css:.title-container' contains exact text 'Collaboration space with key accounts'.</msg>
+<status status="PASS" starttime="20221204 16:28:34.353" endtime="20221204 16:28:34.377"/>
+</kw>
+<status status="PASS" starttime="20221204 16:28:34.353" endtime="20221204 16:28:34.377"/>
+</kw>
+<kw name="Verify Element Text" library="GlobalLibrary">
+<arg>${creator_name}</arg>
+<arg>Abigail Anderson</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20221204 16:28:34.378" level="INFO">Verifying element '//a[contains(text(), 'Abigail')]' contains exact text 'Abigail Anderson'.</msg>
+<status status="PASS" starttime="20221204 16:28:34.377" endtime="20221204 16:28:34.399"/>
+</kw>
+<status status="PASS" starttime="20221204 16:28:34.377" endtime="20221204 16:28:34.399"/>
+</kw>
+<kw name="Verify Element Text" library="GlobalLibrary">
+<arg>${description}</arg>
+<arg>Description</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20221204 16:28:34.400" level="INFO">Verifying element '//label[contains(text(), 'Description')]' contains exact text 'Description'.</msg>
+<status status="PASS" starttime="20221204 16:28:34.400" endtime="20221204 16:28:34.424"/>
+</kw>
+<status status="PASS" starttime="20221204 16:28:34.400" endtime="20221204 16:28:34.424"/>
+</kw>
+<status status="PASS" starttime="20221204 16:28:26.163" endtime="20221204 16:28:34.424"/>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" starttime="20221204 16:28:34.425" endtime="20221204 16:28:36.252"/>
+</kw>
+<kw name="Close Browser Session" library="GlobalLibrary" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221204 16:28:36.252" endtime="20221204 16:28:38.585"/>
+</kw>
+<status status="PASS" starttime="20221204 16:28:36.252" endtime="20221204 16:28:38.586"/>
+</kw>
+<doc>Wazoku Test</doc>
+<tag>Regression</tag>
+<status status="PASS" starttime="20221204 16:28:07.254" endtime="20221204 16:28:38.587"/>
+</test>
+<doc>This is a test case to validate the login on Wazoku Community web page</doc>
+<status status="PASS" starttime="20221204 16:28:05.975" endtime="20221204 16:28:38.588"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Regression</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221204 16:28:07.254" level="ERROR">Error in file 'C:\Users\Admin\PycharmProjects\Wazoku\Automation\library\PageFactory.resource' on line 2: Resource file '..\pages\sign_in_modal.resource' does not exist.</msg>
+<msg timestamp="20221204 16:28:07.254" level="ERROR">Error in file 'C:\Users\Admin\PycharmProjects\Wazoku\Automation\library\PageFactory.resource' on line 3: Variable file '..\pages\locators\sign_in_locators.py' does not exist.</msg>
+<msg timestamp="20221204 16:28:07.254" level="ERROR">Error in file 'C:\Users\Admin\PycharmProjects\Wazoku\Automation\tests\test.robot' on line 8: Importing library '../library/GlobalLibrary.resource' failed: ModuleNotFoundError: No module named '.'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Admin\PycharmProjects\Wazoku\venv\Scripts\robot.exe
+  C:\Users\Admin\AppData\Local\Programs\Python\Python311\python311.zip
+  C:\Users\Admin\AppData\Local\Programs\Python\Python311\DLLs
+  C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib
+  C:\Users\Admin\AppData\Local\Programs\Python\Python311
+  C:\Users\Admin\PycharmProjects\Wazoku\venv
+  C:\Users\Admin\PycharmProjects\Wazoku\venv\Lib\site-packages</msg>
+</errors>
+</robot>
